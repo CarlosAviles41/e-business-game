@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Business Teacher's Shopping Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Teacher's E-Business Shopping Challenge</h1>
+            <p class="subtitle">Make smart decisions by selecting 2 products for your classroom!</p>
+        </header>
+
+        <div class="game-info">
+            <div class="info-card">
+                <h3>Your Budget</h3>
+                <p class="budget">$<span id="budget">500</span></p>
+            </div>
+            <div class="info-card">
+                <h3>Products Selected</h3>
+                <p class="count"><span id="selected-count">0</span> / 2</p>
+            </div>
+            <div class="info-card">
+                <h3>Total Cost</h3>
+                <p class="total">$<span id="total-cost">0</span></p>
+            </div>
+        </div>
+
+        <div class="products-section">
+            <h2>Available Products</h2>
+            <div id="products-grid" class="products-grid">
+                <p style="text-align: center; padding: 20px; color: #999;">Loading products...</p>
+            </div>
+        </div>
+
+        <div class="basket-section">
+            <h2>Your Basket</h2>
+            <div id="basket" class="basket">
+                <p class="empty-basket">Your basket is empty. Select 2 products to complete the challenge!</p>
+            </div>
+        </div>
+
+        <div class="decision-panel">
+            <h2>Decision Factors</h2>
+            <div class="factors">
+                <div class="factor">
+                    <label>Price Range:</label>
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="low">Under $100</option>
+                        <option value="medium">$100 - $250</option>
+                        <option value="high">Over $250</option>
+                    </select>
+                </div>
+                <div class="factor">
+                    <label>Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="technology">Technology</option>
+                        <option value="supplies">Supplies</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="books">Books</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="checkout-btn" class="btn btn-primary" disabled>Complete Challenge</button>
+            <button id="reset-btn" class="btn btn-secondary">Reset Selection</button>
+        </div>
+
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="result-title"></h2>
+                <div id="result-content"></div>
+                <button id="play-again" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
